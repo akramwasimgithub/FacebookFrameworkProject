@@ -22,3 +22,11 @@
 2022-03-17 10:17:15,679 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
 2022-03-17 10:17:15,681 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
 2022-03-17 10:17:15,683 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/63not/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2022-03-18 09:25:26,128  INFO [main] LoginPageTest:57 - login successful with username: bhavanashende661@gmail.com
+2022-03-18 09:25:37,598  INFO [main] LoginPageTest:64 - browser is closed
+2022-03-18 09:26:19,816  INFO [main] LoginPageTest:57 - login successful with username: 8370841564
+2022-03-18 09:26:28,708  INFO [main] LoginPageTest:64 - browser is closed
+2022-03-18 09:26:53,025  INFO [main] LoginPageTest:39 - page title validated
+2022-03-18 09:27:00,021  INFO [main] LoginPageTest:64 - browser is closed
+2022-03-18 09:27:30,812  INFO [main] LoginPageTest:64 - browser is closed
+2022-03-18 09:34:43,088  INFO [main] LoginPageTest:64 - browser is closed
