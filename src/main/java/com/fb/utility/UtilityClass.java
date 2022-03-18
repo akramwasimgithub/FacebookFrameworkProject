@@ -55,7 +55,7 @@ public class UtilityClass extends BaseClass {
 
    /* *//**
      * for take the screenshot
-     *//*
+     */
     public static void takeScreenshotAtEndOfTest() {
         File scrFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         String currentDir = System.getProperty("user.dir");
@@ -64,6 +64,6 @@ public class UtilityClass extends BaseClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }*/
+    }
 
 }

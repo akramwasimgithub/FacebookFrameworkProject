@@ -1,11 +1,13 @@
 package com.fb.base;
 
 import com.fb.utility.UtilityClass;
+import com.fb.utility.WebEventListener;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.events.EventFiringWebDriver;
 
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -15,6 +17,8 @@ import java.util.concurrent.TimeUnit;
 public class BaseClass {
     public static WebDriver driver;
     public  static Properties properties;
+    public  static EventFiringWebDriver e_driver;
+    public static WebEventListener eventListener;
 
     public BaseClass() {
         properties = new Properties();
@@ -48,6 +52,11 @@ public class BaseClass {
             option.addArguments("--disable-notifications");
             driver = new ChromeDriver(option);
         }
+        e_driver = new EventFiringWebDriver(driver);
+        // Now create object of EventListerHandler to register it with EventFiringWebDriver
+        eventListener = new WebEventListener();
+        e_driver.register(eventListener);
+        driver = e_driver;
 
         driver.manage().window().maximize();
         driver.manage().deleteAllCookies();
@@ -55,4 +64,4 @@ public class BaseClass {
         driver.manage().timeouts().implicitlyWait(UtilityClass.IMPLICIT_WAIT_TIME, TimeUnit.SECONDS);
         driver.get(properties.getProperty("url"));
     }
-    }
+}
