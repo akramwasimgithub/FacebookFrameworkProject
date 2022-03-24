@@ -1,4 +1,4 @@
-package com.fb.testdata;
+package com.fb.page;
 
 import com.fb.base.BaseClass;
 import com.fb.page.HomePage;

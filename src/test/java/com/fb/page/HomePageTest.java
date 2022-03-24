@@ -8,6 +8,9 @@ import org.testng.annotations.Test;
 public class HomePageTest extends BaseClass {
     LoginPage loginPage;
     HomePage homePage;
+    ProfilePage profilePage;
+    FindFriendsPage findFriendsPage;
+    GroupsPage groupsPage;
 
     public HomePageTest() {
         super();
@@ -32,15 +35,15 @@ public class HomePageTest extends BaseClass {
         Thread.sleep(50000);
     }
 
-   /* @Test(priority = 3)
+    @Test(priority = 3)
     public void verifyFriendsPageTest() {
-        homePage.clickOnFriendsLink();
+        findFriendsPage= homePage.clickOnFriends();
     }
 
     @Test(priority = 4)
     public void verifySavedPageTest() {
-        homePage.clickOnSavedLink();
-    }*/
+        homePage.clickOnGroups();
+    }
     @AfterMethod
     public void tearDown() {
         driver.quit();
